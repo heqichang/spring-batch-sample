@@ -39,8 +39,8 @@ public class JobController {
     @Autowired
     ExampleJob4 job4;
 
-    @Autowired
-    ExampleJob5 job5;
+//    @Autowired
+//    ExampleJob5 job5;
 
     @Autowired
     AdminMapper adminMapper;
@@ -84,22 +84,22 @@ public class JobController {
             System.out.println(admin);
         }
 
-        Integer insert = adminMapper.insert("shit", "123");
+//        Integer insert = adminMapper.insert("shit", "123");
 
         System.out.println(list);
 
-        System.out.println(insert);
+//        System.out.println(insert);
 
     }
 
     @RequestMapping("/job5")
     public void simpleJob5() throws Exception {
 
-        JobParametersBuilder builder = new JobParametersBuilder();
-        Date date = new Date();
-        System.out.println(date);
-        builder.addDate("date", date);
-        jobLauncher.run(job5.job(), builder.toJobParameters());
+//        JobParametersBuilder builder = new JobParametersBuilder();
+//        Date date = new Date();
+//        System.out.println(date);
+//        builder.addDate("date", date);
+//        jobLauncher.run(job5.job(), builder.toJobParameters());
     }
 
     @RequestMapping("/job6")
@@ -116,6 +116,19 @@ public class JobController {
         builder.addDate("date", date);
 
         Job job2 = jobRegistry.getJob("exampleJob6");
+        System.out.println(job2);
+        jobLauncher.run(job2, builder.toJobParameters());
+        return "success";
+    }
+
+    @RequestMapping("/mjob1")
+    public String mJob1() throws Exception {
+        JobParametersBuilder builder = new JobParametersBuilder();
+        Date date = new Date();
+        System.out.println(date);
+        builder.addDate("date", date);
+
+        Job job2 = jobRegistry.getJob("mybatisJob2");
         System.out.println(job2);
         jobLauncher.run(job2, builder.toJobParameters());
         return "success";

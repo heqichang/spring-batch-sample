@@ -18,7 +18,7 @@ import javax.xml.crypto.Data;
 /**
  * 数据库读取
  */
-@Configuration
+//@Configuration
 public class ExampleJob5 {
 
     private JobBuilderFactory jobBuilderFactory;
