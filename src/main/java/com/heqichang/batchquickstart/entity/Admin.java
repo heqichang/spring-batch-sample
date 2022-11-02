@@ -10,4 +10,6 @@ public class Admin {
     private String name;
 
     private String mobile;
+
+    private String pass;
 }

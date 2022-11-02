@@ -15,6 +15,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 //@Configuration
+// 如果开启 modular 这里可以不用注解 Configuration，如果要的话需要在 web 容器下排除这里的扫描，不然会重复 bean 错误
 public class MybatisJob1 {
 
 
