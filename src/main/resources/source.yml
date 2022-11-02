@@ -1,5 +1,0 @@
-source:
-  url: jdbc:mysql://192.168.11.11:3306/college
-  username: homestead
-  password: secret
-  driver-class-name: com.mysql.cj.jdbc.Driver
