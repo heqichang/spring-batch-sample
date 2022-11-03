@@ -2,6 +2,8 @@ package com.heqichang.batchquickstart.entity;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class Admin {
 
@@ -12,4 +14,6 @@ public class Admin {
     private String mobile;
 
     private String pass;
+
+    private List<Role> roles;
 }
